@@ -8,12 +8,38 @@ import java.util.Scanner;
 
 public class Questionnaire {
     private Integer type;
-    private char isMarried;
-    private char hasChild;
-
+    private char response;
+   // private char hasChild;
     public Scanner input = new Scanner(System.in);
+
     public Customer questionCustomer(){
-    Customer aCustomer = new Customer();
+
+        Customer aCustomer = new Customer();
+        System.out.println("Quel est votre nom?");
+        aCustomer.setLastName(input.nextLine());
+
+        System.out.println("Quel est votre prénom?");
+        aCustomer.setFirstName(input.nextLine());
+
+        System.out.println("Quel est votre date de naissance?");
+        aCustomer.setDateOfBirth(input.nextLine());
+
+        System.out.println("Êtes-vous marié");
+        response = input.next().charAt(0);
+        if(response == 'o'){
+            aCustomer.setMarried(true);
+        }
+        else if (response == 'n'){
+            aCustomer.setMarried(false);
+        }
+        System.out.println("Avez-vous des enfants");
+        response = input.next().charAt(0);
+        if(response == 'o'){
+            aCustomer.setHasChildren(true);
+        }
+        else if (response == 'n'){
+            aCustomer.setHasChildren(false);
+        }
 
     return aCustomer;
     }
@@ -27,21 +53,7 @@ public class Questionnaire {
         this.type = type;
     }
 
-    public char getIsMarried() {
-        return isMarried;
-    }
 
-    public void setIsMarried(char isMarried) {
-        this.isMarried = isMarried;
-    }
-
-    public char getHasChild() {
-        return hasChild;
-    }
-
-    public void setHasChild(char hasChild) {
-        this.hasChild = hasChild;
-    }
 
     public Scanner getInput() {
         return input;
@@ -51,13 +63,4 @@ public class Questionnaire {
         this.input = input;
     }
 
-    @Override
-    public String toString() {
-        return "Questionnaire{" +
-                "type=" + type +
-                ", isMarried=" + isMarried +
-                ", hasChild=" + hasChild +
-                ", input=" + input +
-                '}';
-    }
 }
