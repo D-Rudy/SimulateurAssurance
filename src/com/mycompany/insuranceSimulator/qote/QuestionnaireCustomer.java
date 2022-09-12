@@ -5,10 +5,8 @@ import com.mycompany.insuranceSimulator.customer.Customer;
 import java.util.Scanner;
 
 
-public class Questionnaire {
-    private Integer type;
+public class QuestionnaireCustomer {
     private char response;
-    // private char hasChild;
     public Scanner input = new Scanner(System.in);
 
     public Customer questionCustomer() {
@@ -41,18 +39,16 @@ public class Questionnaire {
                 aCustomer.setHasChildren(false);
             }
         }
-            while (aCustomer.getContractType() == null) {
-                System.out.println("""
-                        A quel type de contrat voulez-vous souscrire:
-                        1: habitation
-                        2: voiture
-                        3: moto
-                        """);
-                aCustomer.setContractType(input.nextInt());
-            }
-
+        while (aCustomer.getContractType() == null) {
+            System.out.println("""
+                    A quel type de contrat voulez-vous souscrire:
+                    1: habitation
+                    2: voiture
+                    3: moto
+                    """);
+            aCustomer.setContractType(input.nextInt());
+        }
+        input.close();
         return aCustomer;
     }
-
-
 }
