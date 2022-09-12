@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 public class QuestionnaireCustomer {
-    private char response;
+    char response;
     public Scanner input = new Scanner(System.in);
 
     public Customer questionCustomer() {
