@@ -37,10 +37,10 @@ public abstract class Contract {
 
     @Override
     public String toString() {
-        return "Contract{" +
-                "Client=" + customer +
-                ", Type de contrat =" + contractType +
-                ", tarif=" + rate +
+        return "Contract {" +
+                "Client:  " + customer +
+                ", Type de contrat: " + contractType +
+                ", tarif: " + rate +
                 '}';
     }
 }

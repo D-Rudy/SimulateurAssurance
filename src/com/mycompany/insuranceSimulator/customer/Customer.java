@@ -8,6 +8,8 @@ public class Customer {
     private Boolean isMarried;
     private Boolean hasChildren;
 
+    private Integer contractType;
+
     public String getLastName() {
         return lastName;
     }
@@ -48,14 +50,23 @@ public class Customer {
         this.hasChildren = hasChildren;
     }
 
+    public Integer getContractType() {
+        return contractType;
+    }
+
+    public void setContractType(Integer contractType) {
+        this.contractType = contractType;
+    }
+
     @Override
     public String toString() {
-        return "Client{" +
-                "Nom='" + lastName + '\'' +
-                ", Prénom='" + firstName + '\'' +
-                ", Date de naissance='" + dateOfBirth + '\'' +
-                ", Marié?=" + isMarried +
-                ", A des enfants?=" + hasChildren +
+        return "Client {" +
+                "Nom: '" + lastName + '\'' +
+                ", Prénom: '" + firstName + '\'' +
+                ", Date de naissance: '" + dateOfBirth + '\'' +
+                ", Marié: " + isMarried +
+                ", Enfant: " + hasChildren +
+                ", Type de contrat: " + contractType +
                 '}';
     }
 }

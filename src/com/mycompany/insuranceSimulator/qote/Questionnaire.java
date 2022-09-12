@@ -5,14 +5,13 @@ import com.mycompany.insuranceSimulator.customer.Customer;
 import java.util.Scanner;
 
 
-
 public class Questionnaire {
     private Integer type;
     private char response;
-   // private char hasChild;
+    // private char hasChild;
     public Scanner input = new Scanner(System.in);
 
-    public Customer questionCustomer(){
+    public Customer questionCustomer() {
 
         Customer aCustomer = new Customer();
         System.out.println("Quel est votre nom?");
@@ -24,43 +23,36 @@ public class Questionnaire {
         System.out.println("Quel est votre date de naissance?");
         aCustomer.setDateOfBirth(input.nextLine());
 
-        System.out.println("Êtes-vous marié");
-        response = input.next().charAt(0);
-        if(response == 'o'){
-            aCustomer.setMarried(true);
+        while (aCustomer.getMarried() == null) {
+            System.out.println("Êtes-vous marié?");
+            response = input.next().charAt(0);
+            if (response == 'o') {
+                aCustomer.setMarried(true);
+            } else if (response == 'n') {
+                aCustomer.setMarried(false);
+            }
         }
-        else if (response == 'n'){
-            aCustomer.setMarried(false);
+        while (aCustomer.getHasChildren() == null) {
+            System.out.println("Avez-vous des enfants?");
+            response = input.next().charAt(0);
+            if (response == 'o') {
+                aCustomer.setHasChildren(true);
+            } else if (response == 'n') {
+                aCustomer.setHasChildren(false);
+            }
         }
-        System.out.println("Avez-vous des enfants");
-        response = input.next().charAt(0);
-        if(response == 'o'){
-            aCustomer.setHasChildren(true);
-        }
-        else if (response == 'n'){
-            aCustomer.setHasChildren(false);
-        }
+            while (aCustomer.getContractType() == null) {
+                System.out.println("""
+                        A quel type de contrat voulez-vous souscrire:
+                        1: habitation
+                        2: voiture
+                        3: moto
+                        """);
+                aCustomer.setContractType(input.nextInt());
+            }
 
-    return aCustomer;
+        return aCustomer;
     }
 
-
-    public Integer getType() {
-        return type;
-    }
-
-    public void setType(Integer type) {
-        this.type = type;
-    }
-
-
-
-    public Scanner getInput() {
-        return input;
-    }
-
-    public void setInput(Scanner input) {
-        this.input = input;
-    }
 
 }

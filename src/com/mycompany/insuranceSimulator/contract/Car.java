@@ -32,9 +32,9 @@ public class Car extends Vehicle{
 
     @Override
     public String toString() {
-        return "Car{" +
-                "Conjoint assuré ?=" + insuredPartner +
-                ", Enfant assuré ?=" + insuredChildren +
+        return "Voiture {" +
+                "Conjoint assuré ?: " + insuredPartner +
+                ", Enfant assuré ?: " + insuredChildren +
                 '}';
     }
 }

@@ -51,11 +51,11 @@ public class Home extends Contract{
 
     @Override
     public String toString() {
-        return "Logement{" +
-                "Type ='" + houseType + '\'' +
-                ", Surface=" + area +
-                ", A un garage?=" + hasGarage +
-                ", Nombre de personne au foyer=" + houshold +
+        return "Logement {" +
+                "Type: '" + houseType + '\'' +
+                ", Surface: " + area +
+                ", A un garage?: " + hasGarage +
+                ", Nombre de personne au foyer: " + houshold +
                 '}';
     }
 }
