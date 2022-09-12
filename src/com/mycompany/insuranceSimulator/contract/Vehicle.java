@@ -32,7 +32,7 @@ public abstract class Vehicle extends Contract {
 
     @Override
     public String toString() {
-        return "Vehicle {" +
+        return super.toString() + "Vehicle {" +
                 "Nombre de chevaux fiscaux: " + fiscalHorsPower +
                 ", bonus / malus: " + bonusMalus +
                 ", Nombre d'années assurées: " + insuranceYears +

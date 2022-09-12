@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61b640bf-556a-49f8-858a-703b52ec95a9" name="Changes" comment="✨ add QuestionnaireHome.java">
-      <change afterPath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/qote/PrintOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="61b640bf-556a-49f8-858a-703b52ec95a9" name="Changes" comment="✨ add I/O Stream (.txt)">
       <change beforePath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/TestQuote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/TestQuote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/contract/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/contract/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/contract/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/contract/Contract.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/contract/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/contract/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/contract/Moto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/contract/Moto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/contract/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/contract/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/qote/QuestionnaireCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/qote/Questionnaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/qote/Questionnaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mycompany/insuranceSimulator/qote/Questionnaire.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1662784519430</updated>
       <workItem from="1662784520697" duration="6722000" />
-      <workItem from="1662955247429" duration="11868000" />
+      <workItem from="1662955247429" duration="12839000" />
     </task>
     <task id="LOCAL-00001" summary="🎉 Start project">
       <created>1662784607859</created>
@@ -131,7 +125,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662955930919</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="🎨">
+      <created>1662979514630</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1662979514630</updated>
+    </task>
+    <task id="LOCAL-00011" summary="✨ add I/O Stream (.txt)">
+      <created>1662979579964</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1662979579964</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +163,8 @@
     <MESSAGE value=" reformat toString()" />
     <MESSAGE value=" reformat QuestionnaireCustomer" />
     <MESSAGE value="✨ add QuestionnaireHome.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="✨ add QuestionnaireHome.java" />
+    <MESSAGE value="" />
+    <MESSAGE value="✨ add I/O Stream (.txt)" />
+    <option name="LAST_COMMIT_MESSAGE" value="✨ add I/O Stream (.txt)" />
   </component>
 </project>

@@ -16,7 +16,7 @@ public class Home extends Contract {
         //Tarif de base est de 15€
         double amount = 15.0;
 
-        //Calculer la majoration surface
+        //Calculer la majoration surface(coeff TAB_MAJORATION)
         if (getArea() >= 10 && getArea() <= 50) {
             amount = amount * super.getTAB_MAJORATION()[0];
         }
@@ -39,7 +39,7 @@ public class Home extends Contract {
             amount = amount * super.getTAB_MAJORATION()[6];
         }
 
-        //Calculer la majoration garage
+        //Calculer la majoration garage(On ajoute au montant (+1 par tranche de 10 à partir d'un logement de 50m²)
         if (getHasGarage()) {
             if (getArea() >= 10 && getArea() <= 50) {
                 amount = amount + 0;
@@ -68,7 +68,6 @@ public class Home extends Contract {
         if (getHousehold() > 7) {
             amount = amount + 7;
         }
-
         amount = switch (getHousehold()) {
             case 1 -> amount + 0;
             case 2 -> amount + 2;
@@ -85,13 +84,14 @@ public class Home extends Contract {
 
     @Override
     public void print() {
+        //impression dans un fichier txt dans le repertoire principal du projet
         PrintOutput printOutput = new PrintOutput(super.getCustomer(), super.getRate());
-        printOutput.testBufferedWriter("devis_habitation_"+ super.getCustomer().getLastName()+"_"+super.getCustomer().getFirstName()+".txt");
+        //changé la destination ci-dessous ex: C:\\User\Documents\nom_fichier.txt
+        printOutput.testBufferedWriter("devis_habitation_" + super.getCustomer().getLastName() + "_" + super.getCustomer().getFirstName() + ".txt");
     }
 
     public Home(Customer customer) {
         super.setCustomer(customer);
-
     }
 
     public String getHouseType() {

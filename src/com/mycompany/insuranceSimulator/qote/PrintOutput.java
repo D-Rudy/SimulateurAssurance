@@ -1,19 +1,18 @@
 package com.mycompany.insuranceSimulator.qote;
 
-import com.mycompany.insuranceSimulator.contract.Home;
 import com.mycompany.insuranceSimulator.customer.Customer;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 
 public class PrintOutput {
-    private Customer customer;
-    private Double amount;
+    private final Customer CUSTOMER;
+    private final Double AMOUNT;
     protected String destination;
 
-    public PrintOutput(Customer customer, Double amount) {
-        this.customer = customer;
-        this.amount = amount;
+    public PrintOutput(Customer CUSTOMER, Double amount) {
+        this.CUSTOMER = CUSTOMER;
+        this.AMOUNT = amount;
     }
 
     public void testBufferedWriter(String destination) {
@@ -24,7 +23,7 @@ public class PrintOutput {
     private void processing() {
         try {
             BufferedWriter file = new BufferedWriter(new FileWriter(destination));
-            if(customer.getContractType() == 1){
+            if(CUSTOMER.getContractType() == 1){
                 file.write("""
                                   +----------------------------+
                                   | DEVIS ASSURANCE HABITATION |
@@ -32,15 +31,15 @@ public class PrintOutput {
                         """);
                 file.newLine();
             }
-            file.write("Nom: " + customer.getLastName());
+            file.write("Nom: " + CUSTOMER.getLastName());
             file.newLine();
-            file.write("Prénom: " + customer.getFirstName());
+            file.write("Prénom: " + CUSTOMER.getFirstName());
             file.newLine();
             file.write("Le tarif à payer pour l'assurance ");
-            if(customer.getContractType() == 1){
+            if(CUSTOMER.getContractType() == 1){
                 file.write("habitation");
             }
-            file.write(" est de " + amount);
+            file.write(" est de " + AMOUNT);
             file.newLine();
             file.write("""
                     Veuillez joindre:

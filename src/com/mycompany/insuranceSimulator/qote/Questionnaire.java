@@ -3,7 +3,6 @@ package com.mycompany.insuranceSimulator.qote;
 import com.mycompany.insuranceSimulator.contract.Home;
 import com.mycompany.insuranceSimulator.customer.Customer;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -48,22 +47,20 @@ public class Questionnaire {
                     1: habitation
                     2: voiture
                     3: moto
-                    :
                     """);
             aCustomer.setContractType(input.nextInt());
         }
         return aCustomer;
     }
 
-    public void quoteHome(Customer customer) throws IOException {
+    public void quoteHome(Customer customer) {
         Home home = new Home(customer);
 
         while (home.getHouseType() == null) {
             System.out.println("""
-                    Quel type de logement avez vous?
+                    Quel type de logement avez-vous?
                     1- Maison
                     2- Appartement
-                    :
                     """);
             resp = input.nextInt();
             if (resp == 1) {
@@ -72,17 +69,11 @@ public class Questionnaire {
                 home.setHouseType("Appartement");
             }
             while (home.getArea() == null) {
-                System.out.println("""
-                        Superficie de votre logement en m²
-                        :
-                        """);
+                System.out.println("Superficie de votre logement en m²");
                 home.setArea(input.nextInt());
             }
             while (home.getHasGarage() == null) {
-                System.out.println("""
-                        Avez-vous un garage? (o/n)
-                        :
-                        """);
+                System.out.println("Avez-vous un garage? (o/n)");
                 response = input.next().charAt(0);
                 if (response == 'o') {
                     home.setHasGarage(true);
@@ -94,7 +85,6 @@ public class Questionnaire {
                 System.out.println("De combien de personnes est composé votre foyer?");
                 home.setHousehold(input.nextInt());
             }
-            System.out.println(home);
             home.calculateRate();
             home.print();
         }
