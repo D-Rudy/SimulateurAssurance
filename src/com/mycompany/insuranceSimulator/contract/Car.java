@@ -1,12 +1,11 @@
 package com.mycompany.insuranceSimulator.contract;
 
-public class Car extends Vehicle{
+public class Car extends Vehicle {
     private Boolean insuredPartner;
     private Boolean insuredChildren;
 
     @Override
-    public Float calculateRate() {
-        return null;
+    public void calculateRate() {
     }
 
     @Override

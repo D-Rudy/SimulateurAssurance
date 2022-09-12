@@ -1,6 +1,6 @@
 package com.mycompany.insuranceSimulator.contract;
 
-public abstract class Vehicle extends Contract  {
+public abstract class Vehicle extends Contract {
 
     private Integer fiscalHorsPower;
     private Float bonusMalus;

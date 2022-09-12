@@ -3,9 +3,9 @@ package com.mycompany.insuranceSimulator.contract;
 public class Moto extends Vehicle {
     private Integer numberOfCylinder;
 
+
     @Override
-    public Float calculateRate() {
-        return null;
+    public void calculateRate() {
     }
 
     @Override

@@ -7,7 +7,6 @@ public class Customer {
     private String dateOfBirth;
     private Boolean isMarried;
     private Boolean hasChildren;
-
     private Integer contractType;
 
     public String getLastName() {
